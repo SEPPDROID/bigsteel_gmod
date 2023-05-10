@@ -36,7 +36,7 @@ SWEP.Secondary.ClipSize 	= -1
 SWEP.Secondary.DefaultClip 	= -1
 SWEP.Secondary.Automatic 	= false
 SWEP.Secondary.Ammo 		= "none"
-SWEP.ExplosionRadius 		= 300
+SWEP.ExplosionRadius 		= 450
 SWEP.ExplosionDamage 		= 25
 
 function SWEP:Initialize()
@@ -103,13 +103,11 @@ function SWEP:SecondaryAttack()
       
       self:TakeSecondaryAmmo(1)
       
-      self:SetNextSecondaryFire(CurTime() + 1)
+      self:SetNextSecondaryFire(CurTime() + 0.65)
       
    end
    
 end
-
-
 
 function SWEP:CanPrimaryAttack()
 
