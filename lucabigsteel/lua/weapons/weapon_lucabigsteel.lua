@@ -94,6 +94,7 @@ function SWEP:SecondaryAttack()
          if distance <= self.ExplosionRadius then
             local push = (1 - (distance / self.ExplosionRadius)) * 900 -- Push force decreases with distance
             local direction = (ply:GetPos() - explodePos):GetNormalized()
+            direction.z = direction.z + 0.5 -- Add upward force
             ply:SetVelocity(direction * push)
          end
       end
@@ -107,6 +108,7 @@ function SWEP:SecondaryAttack()
    end
    
 end
+
 
 
 function SWEP:CanPrimaryAttack()
