@@ -150,9 +150,3 @@ function SWEP:Reload()
    self.Weapon:DefaultReload(ACT_VM_RELOAD)
    
 end
-
-function SWEP:Reload()
-
-   self:DefaultReload(ACT_VM_RELOAD)
-   
-end
